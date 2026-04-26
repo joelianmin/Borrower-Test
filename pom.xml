@@ -84,7 +84,7 @@
               <outputDirectory>target/cucumber-reports</outputDirectory>
               <inputDirectory>target</inputDirectory>
               <jsonFiles>
-                <param>**/*.ndjson</param>
+                <param>**/*.json</param>
               </jsonFiles>
             </configuration>
           </execution>
