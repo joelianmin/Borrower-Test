@@ -25,7 +25,7 @@ public class Borrower {
         }
 
         if (password.length() < 8) {
-            throw new RuntimeException("Password must be at least 8 characters");
+            throw new RuntimeException("Password must be at least 8 characters long");
         }
 
         return new Borrower(

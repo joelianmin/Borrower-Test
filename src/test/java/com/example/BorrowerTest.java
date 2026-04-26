@@ -22,7 +22,7 @@ public class BorrowerTest {
 
     @Test
     void should_fail_when_email_invalid() {
-        assertThrows(RuntimeException.class, () -> {
+        RuntimeException ex = assertThrows(RuntimeException.class, () -> {
             Borrower.register("invalid-email", "081234567890", "SecurePass123");
         });
 
@@ -41,7 +41,7 @@ public class BorrowerTest {
     @Test
     void should_fail_when_password_invalid() {
         RuntimeException ex = assertThrows(RuntimeException.class, () -> {
-            Borrower.register("john@example.com", "081234567890", "weakpass");
+            Borrower.register("john@example.com", "081234567890", "weak");
         });
 
         assertEquals("Password must be at least 8 characters long", ex.getMessage());
